@@ -1,0 +1,51 @@
+/*SECCION 1: MENU*/
+
+.photo-home{
+  background: url('../dist/img/background.jpg');
+}
+/*SECCION 2: ABOUT ME*/
+.box {
+  width:100%;
+  background-color: whitesmoke;
+  margin-top: 500px;
+  padding: 10% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
+  -moz-box-shadow:0 10px 10px rgba(182, 182, 182, 0.75);
+  -webkit-box-shadow: 0 10px 10px rgba(182, 182, 182, 0.75);
+  box-shadow: 0 10px 10px rgba(182, 182, 182, 0.75);
+}
+
+.box > .wrapper {
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(5deg);
+}
+
+
+.img{
+  background: url('../dist/img/testing.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width:50%;
+}
+
+#about{
+  h1{
+    color:#ff4081;
+      text-shadow: 2px 2px #00bcd4;
+  }
+
+}
+
+/*SECCION 3: SKILLS*/
+/*SECCION 4: PROJECTS*/
+/*SECCION 5: CONTACT*/
+/*FOOTER*/
