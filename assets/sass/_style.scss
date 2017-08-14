@@ -1,51 +1,403 @@
-/*SECCION 1: MENU*/
+/*NAVBAR*/
+$background--color:url('../img/background.jpg');
+$icon--color:$rosa;
+$font--color:#000000;
+$font--color--active:#000000;
+$font--primary:'Fira Sans', sans-serif;
+$transition--length: .8;
 
-.photo-home{
-  background: url('../dist/img/background.jpg');
+body{
+  background: url('../img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: $font--primary;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
-/*SECCION 2: ABOUT ME*/
-.box {
+
+.site-content{
+  max-width: 1100px;
+  height: 100vh;
+  margin-left: 150px;//cambie aqui
+  margin-right: auto;
+  padding-top: 250px;//agregue
+  display: inline-block;//cambie aqui
+  align-items: center;
+  justify-content: right;//cam
+  -webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0.9,0.9,0.9,0.9)), to(rgba(0.5,0.5,0.5,0.5)));
+  &__headline{
+    font-weight: 500;
+    color: $font--color;
+    font-size: 5em;
+  }
+}
+
+//default state
+.menu-icon{
+  $size: 30px;
+  height: $size;
+  width: $size;
+  position: fixed;
+  z-index:2;
+  left: 50px;
+  top: 30px;
+  cursor: pointer;
+  &__line{
+    height: 2px;
+    width: $size;
+    display: block;
+    background-color: $font--color;
+    margin-bottom: 4px;
+    transition: transform .2s ease, background-color .5s ease;
+  }
+  &__line-left{
+    width: $size / 2;
+  }
+  &__line-right{
+    width: $size / 2;
+    float: right;
+  }
+}
+
+.nav{
+  $width: 100vw;
+  $height: 100vh;
+  $font--size--calc: calc(2vw + 10px);
+  $transition--easing: cubic-bezier(.77,0,.175,1);
+  position: fixed;
+  z-index:1;
+  &:before,&:after{
+    content: "";
+    position: fixed;
+    width:$width;
+    height:$height;
+    background: rgba(#eaeaea, .2);
+    z-index: -1;
+    transition: transform $transition--easing $transition--length + s;
+    transform: translateX(0%) translateY(-100%);
+  }
+  &:after{
+    background: rgba(#ffffff, 1);/*color fondo cuando cae el menu*/
+    transition-delay: 0s;
+  }
+  &:before{
+    transition-delay: .1s;
+  }
+  &__content{
+    position: fixed;
+    top:50%;
+    transform: translate(0%,-50%);
+    width: 100%;
+      text-align: center;
+    font-size: $font--size--calc;
+    font-weight: 200;
+    cursor: pointer;
+  }
+  &__list-item{
+    position: relative;
+    display: inline-block;
+    transition-delay: $transition--length + s;
+    opacity: 0;
+    transform: translate(0%, 100%);
+    transition: opacity .2s ease, transform .3s ease;
+    margin-right: 25px;
+    &:before{
+      content: "";
+      position: absolute;
+      background: $font--color--active;
+      width: 20px;
+      height: 1px;
+      top: 100%;
+      transform: translate(0%, 0%);
+      transition: all .3s ease;
+      z-index: -1;
+    }
+    &:hover{
+      &:before{
+        width: 100%;
+      }
+    }
+  }
+}
+
+//active state
+body.nav-active{
+  $menu--items--count: 4;
+  .menu-icon{
+    &__line{
+      background-color: $rosa;
+      transform: translateX(0px) rotate(-45deg);
+    }
+    &__line-left{
+      transform: translateX(1px) rotate(45deg);
+    }
+    &__line-right{
+      transform: translateX(-2px) rotate(45deg);
+    }
+  }
+  .nav{
+    visibility:visible;
+    &:before,&:after{
+      transform: translateX(0%) translateY(0%);
+    }
+    &:after{
+      transition-delay: .1s;
+    }
+    &:before{
+      transition-delay: 0s;
+    }
+    &__list-item{
+      color: $calipso;
+      text-shadow: 2px 2px $rosa;
+      padding-left: 50px;
+      opacity: 1;
+      transform: translateX(0%);
+      transition: opacity .3s ease, transform .3s ease, color .3s ease;
+      @for $i from 0 through $menu--items--count {
+        &:nth-child(#{$i}){
+          transition-delay: $transition--length * $i / 8 + .5 + s;
+        }
+      }
+    }
+  }
+}
+
+
+
+/*SECCION 1: MENU*/
+.home{
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  top:0;
+  bottom:0;
+  background: url('../img/background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*-webkit-mask-image:-webkit-gradient(linear, left top, left bottom, from(rgba(0.9,0.9,0.9,0.9)), to(rgba(0.5,0.5,0.5,0.5)))*/
+  
+}
+fade {
+  position: absolute;
+  bottom: 0px;
+  display: block;  
+  width: 100%;
+  height: 50px;  
+  background-image: linear-gradient(to bottom, 
+    rgba(255, 255, 255, 0), 
+    rgba(255, 255, 255, 0.9)
+    100%);
+}
+
+
+/*SECCION 2: ABOUT ME (blanco)*/
+.about{
   width:100%;
-  background-color: whitesmoke;
-  margin-top: 500px;
-  padding: 10% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+  height:300px;
+  background:whitesmoke;
+    h1{
+    color:$calipso;
+    text-shadow: 4px 4px $rosa;
+    padding-left: 50px;
+  }
+}
+.box-der {
+  margin-top: 15%;
+  padding: 20% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
+  -webkit-transform: skewY(5deg);
+  -moz-transform: skewY(5deg);
+  -ms-transform: skewY(5deg);
+  -o-transform: skewY(5deg);
+  transform: skewY(-5deg);
+    /* sombra borde */
+  -moz-box-shadow:0 10px 10px rgba(50, 50, 50, 0.55);
+  -webkit-box-shadow: 0 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow: 0 10px 10px rgba(50, 50, 50, 0.55);
+}
+
+.box-der > .wrapper-der {
   -webkit-transform: skewY(-5deg);
   -moz-transform: skewY(-5deg);
   -ms-transform: skewY(-5deg);
   -o-transform: skewY(-5deg);
-  transform: skewY(-5deg);
-  -moz-box-shadow:0 10px 10px rgba(182, 182, 182, 0.75);
-  -webkit-box-shadow: 0 10px 10px rgba(182, 182, 182, 0.75);
-  box-shadow: 0 10px 10px rgba(182, 182, 182, 0.75);
+  transform: skewY(5deg);
 }
 
-.box > .wrapper {
+.me{
+  background: url('../img/testing.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  width:100%;
+  height:215px;
+}
+
+/*SECCION 3: PROJECTS (blanco)*/
+.sec-3{
+  width:100%;
+  height:100vh;
+}
+/*  
+  /*background: url('../img/total-black.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top:-60px;
+}*/
+/* EFECTO HOVER FOTO */
+.view-tenth img {
+   -webkit-transform: scaleY(1);
+   -moz-transform: scaleY(1);
+   -o-transform: scaleY(1);
+   -ms-transform: scaleY(1);
+   transform: scaleY(1);
+   -webkit-transition: all 0.7s ease-in-out;
+   -moz-transition: all 0.7s ease-in-out;
+   -o-transition: all 0.7s ease-in-out;
+   -ms-transition: all 0.7s ease-in-out;
+   transition: all 0.7s ease-in-out;
+}
+.view-tenth .mask {
+   background-color: rgba(255, 231, 179, 0.3);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.view-tenth h2 {
+   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+   background: transparent;
+   margin: 20px 40px 0px 40px;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   color: #333;
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.view-tenth p {
+   color: #333;
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+}
+.view-tenth a.info {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform: scale(0);
+   -moz-transform: scale(0);
+   -o-transform: scale(0);
+   -ms-transform: scale(0);
+   transform: scale(0);
+   -webkit-transition: all 0.5s linear;
+   -moz-transition: all 0.5s linear;
+   -o-transition: all 0.5s linear;
+   -ms-transition: all 0.5s linear;
+   transition: all 0.5s linear;
+}
+.view-tenth:hover img {
+   -webkit-transform: scale(10);
+   -moz-transform: scale(10);
+   -o-transform: scale(10);
+   -ms-transform: scale(10);
+   transform: scale(10);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+}
+.view-tenth:hover .mask {
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+.view-tenth:hover h2,.view-tenth:hover p,.view-tenth:hover a.info {
+   -webkit-transform: scale(1);
+   -moz-transform: scale(1);
+   -o-transform: scale(1);
+   -ms-transform: scale(1);
+   transform: scale(1);
+   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+}
+
+/*SECCION 4: SKILLS (color)*/
+.box-izq {
+  margin-top:20px;
+  padding: 20% 20px; /* Added a percentage value for top/bottom padding to keep the wrapper inside of the parent */
   -webkit-transform: skewY(5deg);
   -moz-transform: skewY(5deg);
   -ms-transform: skewY(5deg);
   -o-transform: skewY(5deg);
   transform: skewY(5deg);
+    /* sombra borde */
+  -moz-box-shadow:0 10px 10px rgba(50, 50, 50, 0.55);
+  -webkit-box-shadow: 0 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow: 0 10px 10px rgba(50, 50, 50, 0.55);
 }
 
-
-.img{
-  background: url('../dist/img/testing.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  border-radius: 50%;
-  width:50%;
+.box-izq > .wrapper-izq{
+  -webkit-transform: skewY(-5deg);
+  -moz-transform: skewY(-5deg);
+  -ms-transform: skewY(-5deg);
+  -o-transform: skewY(-5deg);
+  transform: skewY(-5deg);
 }
-
-#about{
-  h1{
-    color:#ff4081;
-      text-shadow: 2px 2px #00bcd4;
+.skills{
+  background:$white;
+  width:100%;
+  height:300px;
+    h4,h2{
+    color:$calipso;
+    text-shadow: 4px 4px $rosa;
+    padding-left: 50px;
   }
-
+}
+/*SECCION 5: CONTACT (color)*/
+.sec-5{
+  width:100%;
+  height:70vh;
 }
 
-/*SECCION 3: SKILLS*/
-/*SECCION 4: PROJECTS*/
+
+
 /*SECCION 5: CONTACT*/
 /*FOOTER*/
+
+.footer-pic{
+  background-color:$white;
+  width:100%;
+  height:50px;
+    p{
+      color:$calipso;
+      text-shadow: 2px 2px $rosa;
+      font-weight:bold;
+      padding-left: 50px;
+      letter-spacing: 2px;
+    }
+}

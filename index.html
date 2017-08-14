@@ -16,35 +16,158 @@
 	<link rel="stylesheet" href="dist/css/style.min.css">
 </head>
 <body>
-<!-- SECCION 1: MENU -->
-<div class="sec-1 photo-home" id="menu">
-	<!--<div class="photo-home"></div>-->
+<!-- NAVBAR -->
+	<div class="menu-icon">
+	<span class="menu-icon__line menu-icon__line-left"></span>
+	<span class="menu-icon__line"></span>
+	<span class="menu-icon__line menu-icon__line-right"></span>
 </div>
+
+<div class="nav">
+	<div class="nav__content">
+		<ul class="nav__list">
+			<li class="nav__list-item"><a href="#home">Home</a></li>
+			<li class="nav__list-item"><a href="#about">About</a></li>
+			<li class="nav__list-item"><a href="#projects">Projects</a></li>
+			<li class="nav__list-item"><a href="#skills">Skills</a></li>
+			<li class="nav__list-item"><a href="#contact">Contact</a></li>
+		</ul>
+	</div>
+</div>
+
+<div class="site-content">
+	<h3 class="site-content__headline">DREAM it</h3>
+	<h3 class="site-content__headline">DEVELOP it</h3>
+	<h1 class="site-content__headline">CODE it!</h1>
+</div>
+
+<!-- SECCION 1: HOME -->
+	<!--<div class="home responsive-img">
+		<fade/>
+	</div>
+
 <!-- SECCION 2: ABOUT ME (blanco)-->
-	<section class="sec-1" id="about">
-		<div class="box">
-			<div class="wrapper">
+
+		<div class="box-der about" id="about">
+			<div class="wrapper-der">
+				<div class="container-fluid">
 					<div class="row">
-						<div class="col offset-l9 l3 col offset-m9 m3 s12 title-about">
-							<h1 class="shadow">ABOUT ME</h1>
+						<div class="col offset-l8 l4 col offset-m8 m4 s12 title-about">
+							<h1>ABOUT</h1>
+							<h1>ME</h1>
 						</div>
-					</div><!-- cierre row text about-->
+					</div>
+					<!--<div class="row center">
+						<div class="col l4 col m4 s12 title-about">
+							<div class="me"></div>
+						</div>
+						<div class="col l8 col m8 s12 text-about">
+							<h3>Hey! I am Tanya</h3>
+							<p>Prototyper · Cat lover · Pizza/Pasta eater · Yoga enthusiast</p>
+							<br>
+							<p> (falta el resto del statement)</p>
+						</div>
+					</div><!-- cierre row text ABOUT ME-->
+				</div>
 			</div><!-- cierre wrapper -->
 		</div><!-- cierre box -->
-    </section>
-
-<!-- SECCION 3: SKILLS (color)-->
 
 
-<!-- SECCION 4: PROJECTS (blanco)-->
 
+<!-- SECCION 3: PROJECTS (blanco)-->
+<section class="sec-3">
+	<div class="container-fluid" id="projects">
+		<div class="row">
+			<div class="col l3 m3 s12">
+				<h1>Projects</h1>
+			</div>
+			<div class="col l12 m12 s12">
+				<div class="row">
+					<div class="col l3 m3 s12">
+						
+					</div>
+					<div class="col l3 m3 s12">
+						
+					</div>
+					<div class="col l3 m3 s12">
+						
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- SECCION 4: SKILLS (color)-->
+	<div class="box-izq skills">
+    	<div class="wrapper-izq">
+    		<div class="row">
+    			<div class="col l3 col m3 ">
+    				<h2>SUPER</h2>
+    				<h2>POWERS</h2>
+    			</div>
+    			<div class="col l9 m9 ">
+    				<!-- 1era row icons -->
+    				<div class="row">
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-trello-plain-wordmark colored"></i>
+    					</div>
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-bootstrap-plain-wordmark"></i>
+    					</div>
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-css3-plain-wordmark colored"></i></i>
+    					</div>
+    				</div>
+    				<!-- 2da row icons -->
+    				<div class="row">
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-javascript-plain colored"></i>
+    					</div>
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-git-plain"></i>
+    					</div>
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-github-plain-wordmark"></i>
+    					</div>
+    				</div>
+    				<!-- 3era row icons -->
+    				<div class="row">
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-gulp-plain colored"></i>
+    					</div>
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<i class="devicon-sass-original colored"></i>
+    					</div>
+    					<div class="col s12 m4 l4 xl4 icons responsive-img">
+    						<img src="dist/img/materialz.png" alt="" class="">
+    					</div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
 
 <!-- SECCION 5: CONTACT (color)-->
-	<!--<div class="container"> (no va)-->
+	<section class="sec-5 center" id="contact">
+		<h2 class="center">CONTACT ME</h2>
+		<h6></h6>
+		<i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+		<i class="fa fa-envelope fa-4x" aria-hidden="true"></i>
+		<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+	</section>
+
 
 <!-- FOOTER -->
 <footer>
-	<p class="footer"></p>
+	<div class="footer-pic">
+		<div class="container">
+			<div class="row center">
+				<div class="col l12 m12 s12">
+					<p class="footer">© Tcramire 2017</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </footer>
 
 
