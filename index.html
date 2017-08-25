@@ -18,29 +18,38 @@
 <body>
 <!-- NAVBAR -->
 
+
 	<div class="menu-icon">
 		<span class="menu-icon__line menu-icon__line-left"></span>
 		<span class="menu-icon__line"></span>
 		<span class="menu-icon__line menu-icon__line-right"></span>
 	</div>
 
+
 	<div class="nav">
 		<div class="nav__content">
 			<ul class="nav__list">
-				<li class="nav__list-item"><a href="#home">Home</a></li>
-				<li class="nav__list-item"><a href="#about">About</a></li>
-				<li class="nav__list-item"><a href="#projects">Projects</a></li>
-				<li class="nav__list-item"><a href="#skills">Skills</a></li>
-				<li class="nav__list-item"><a href="#contact">Contact</a></li>
+				<li class="nav__list-item title"><a href="#home">Home</a></li>
+				<li class="nav__list-item title"><a href="#about">About</a></li>
+				<li class="nav__list-item title"><a href="#projects">Projects</a></li>
+				<li class="nav__list-item title"><a href="#skills">Skills</a></li>
+				<li class="nav__list-item title"><a href="#contact">Contact</a></li>
 			</ul>
 		</div>
 	</div>
 
-	<div class="site-content">
-		<h3 class="site-content__headline">DREAM it</h3>
-		<h3 class="site-content__headline">DEVELOP it</h3>
-		<h1 class="site-content__headline">CODE it!</h1>
-	</div>
+<!-- agregué section y center y br para separar del icono menú  -->
+<section class="center"><br><br><br>
+  <div class="container">
+	<div class="row">
+		<div class="site-content col xl12 l12 m12 s12">
+			<h3 class="site-content__headline white-text">DREAM it</h3>
+			<h3 class="site-content__headline white-text">DEVELOP it</h3>
+			<h1 class="site-content__headline white-text">CODE it!</h1>
+		</div>
+	  </div>
+   </div>
+</section>
 
 <!-- SECCION 1: HOME -->
 	<!--<div class="home responsive-img">
@@ -49,175 +58,194 @@
 
 <!-- SECCION 2: ABOUT ME (blanco)-->
 
+<!-- agregué section  -->
+<section>
 		<div class="box-der about" id="about">
 			<div class="wrapper-der">
 				<div class="container-fluid">
 					<div class="row">
-						<div class="col offset-l8 l4 col offset-m8 m4 s12 title-about">
-							<h1>ABOUT</h1>
-							<h1>ME</h1>
+						<div class="col xl12 l12 m12 s12 title-about center">
+							<h1 class="title">ABOUT ME</h1>
 						</div>
 					</div>
-					<!--<div class="row center">
-						<div class="col l4 col m4 s12 title-about">
-							<div class="me"></div>
-						</div>
-						<div class="col l8 col m8 s12 text-about">
-							<h3>Hey! I am Tanya</h3>
-							<p>Prototyper · Cat lover · Pizza/Pasta eater · Yoga enthusiast</p>
-							<br>
-							<p> (falta el resto del statement)</p>
-						</div>
-					</div><!-- cierre row text ABOUT ME-->
 				</div>
 			</div><!-- cierre wrapper -->
 		</div><!-- cierre box -->
+</section>
+<section class="me">
+	<div class="container">
+		<div class="row center">
+			<div class="col l4 col m4 s12 title-about">
+				<div class="my-photo">
+					<img src="dist/img/testing.jpg" alt="" class="responsive-img circle">
+				</div>
+			</div>
+			<div class="col l8 col m8 s12 text-about white-text">
+				<h3>Hey! I am Tanya</h3>
+				<p>Prototyper · Cat lover · Pizza/Pasta eater · Yoga enthusiast <3</p> 
+				<br>
+				<p> (falta el resto del statement)</p>
+			</div>
+		</div><!-- cierre row text ABOUT ME-->
+	</div>
+</section>
+
 
 
 
 <!-- SECCION 3: PROJECTS (blanco)-->
-<div class="row portafolio">
-    			<div class="col l12 m12 s12 center">
-    				<h3>Portfolio</h3>
-    				<div class="col l8 offset-l2 m8 offset-m2">
-	    				<h5>Showcase your work effectively and in an attractive form that your prospective clients will love.</h5>
-	    			</div>
-    			</div>
-    			<div class="row">
-    				<div class="col l4 m12 s12  center">
-    					<div class="cada-portafolio-1 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class=" pink-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Morbi Mauris Diem</h5>
-	    					</div>
-	    				</div>
-    				</div>
-    				<div class="col l4 m12 s12 center">
-						<div class="cada-portafolio-2 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-								<h6 class="blue-text">DESIGN</h6>
-	    						<h5 class="white-text">Interdum et malesiam</h5>
-	    					</div>
-						</div>
-    				</div>
-    				<div class="col l4 m12 s12 center">
-	    				<div class="cada-portafolio-3 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class=" red-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Duis loareet tellus arcu</h5>
-	    					</div>
-	    				</div>
-    				</div>
-    				<div class="col l6 m12 s12 center">
-	    				<div class="cada-portafolio-4 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class=" pink-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Proin aliquet nibh variusm</h5>
-	    					</div>
-	    				</div>
-    				</div>
-    				<div class="col l6 m12 s12 center">
-	    				<div class="cada-portafolio-5 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class=" blue-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Our Awesome Project</h5>
-	    					</div>
-	    				</div>
-    				</div>
-    				<div class="col l4 m12 s12  center">
-    					<div class="cada-portafolio-6 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class=" pink-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Morbi Mauris Diem</h5>
-	    					</div>
-	    				</div>
-    				</div>
-    				<div class="col l4 m12 s12 center">
-						<div class="cada-portafolio-7 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class=" pink-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Morbi Mauris Diem</h5>>
-	    					</div>
-						</div>
-    				</div>
-    				<div class="col l4 m12 s12 center">
-	    				<div class="cada-portafolio-8 z-depth-5">
-	    					<div class="cada-portafolio-hover center">
-	    						<h6 class="blue-text">PRODUCTIVITY</h6>
-	    						<h5 class="white-text">Boy fourable day</h5>
-	    					</div>
-	    				</div>
-    				</div>
-    			</div>
-    		</div>
-<!-- SECCION 4: SKILLS (color)-->
-	<div class="box-izq skills">
-		<div class="wrapper-izq">
-			<div class="row">
-				<div class="col l3 col m3 ">
-					<h2>SUPER</h2>
-					<h2>POWERS</h2>
+
+<!-- agregué section y container -->
+<section>
+	<div class="container">
+		<div class="row portafolio">
+			<div class="col l12 m12 s12 center">
+				<h3 class="white-text">Portfolio</h3>
+				<div class="col l8 offset-l2 m8 offset-m2">
+					<h5 class="white-text">Showcase your work effectively and in an attractive form that your prospective clients will love.</h5>
 				</div>
-				<div class="col l9 m9 ">
-					<!-- 1era row icons -->
-					<div class="row">
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-trello-plain-wordmark colored"></i>
-						</div>
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-bootstrap-plain-wordmark"></i>
-						</div>
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-css3-plain-wordmark colored"></i></i>
+			</div>
+			<div class="row">
+				<div class="col l4 m12 s12 center">
+					<div class="cada-portafolio-1 z-depth-5">
+						<div class="cada-portafolio-hover center">
+							<h6 class=" pink-text">PRODUCTIVITY</h6>
+							<h5 class="white-text">Morbi Mauris Diem</h5>
 						</div>
 					</div>
-					<!-- 2da row icons -->
-					<div class="row">
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-javascript-plain colored"></i>
-						</div>
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-git-plain"></i>
-						</div>
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-github-plain-wordmark"></i>
+				</div>
+				<div class="col l4 m12 s12 center">
+					<div class="cada-portafolio-2 z-depth-5">
+						<div class="cada-portafolio-hover center">
+							<h6 class="blue-text">DESIGN</h6>
+							<h5 class="white-text">Interdum et malesiam</h5>
 						</div>
 					</div>
-					<!-- 3era row icons -->
-					<div class="row">
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-gulp-plain colored"></i>
+				</div>
+				<div class="col l4 m12 s12 center">
+					<div class="cada-portafolio-3 z-depth-5">
+						<div class="cada-portafolio-hover center">
+							<h6 class=" red-text">PRODUCTIVITY</h6>
+							<h5 class="white-text">Duis loareet tellus arcu</h5>
 						</div>
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<i class="devicon-sass-original colored"></i>
+					</div>
+				</div>
+				<div class="col l6 m12 s12 center">
+					<div class="cada-portafolio-4 z-depth-5">
+						<div class="cada-portafolio-hover center">
+							<h6 class=" pink-text">PRODUCTIVITY</h6>
+							<h5 class="white-text">Proin aliquet nibh variusm</h5>
 						</div>
-						<div class="col s12 m4 l4 xl4 icons responsive-img">
-							<img src="dist/img/materialz.png" alt="" class="">
+					</div>
+				</div>
+				<div class="col l6 m12 s12 center">
+					<div class="cada-portafolio-5 z-depth-5">
+						<div class="cada-portafolio-hover center">
+							<h6 class=" blue-text">PRODUCTIVITY</h6>
+							<h5 class="white-text">Our Awesome Project</h5>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+</section>
+
+<!-- SECCION 4: SKILLS (color)-->
+
+<!-- agregué section que toma solo al titulo super powers-->
+<section class="superpowers">
+	<div class="box-izq skills">
+		<div class="wrapper-izq">
+			<div class="row">
+				<div class="col xl12 l12 m12 s12 center">
+					<h2 class="title center">SUPER POWERS</h2>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<!-- cree con container y row y la vista mobile tb es con columnas de 4 -->
+<section class="skills-icons center">
+	<!-- 1era row icons -->
+<div class="container">
+	<div class="row">
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-bootstrap-plain-wordmark"></i>
+		</div>
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-css3-plain-wordmark colored"></i>
+		</div>
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-javascript-plain colored"></i>
+		</div>
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-git-plain"></i>
+		</div>
+	</div>
+	</div>
+	<!-- 2da row icons -->
+	<div class="row">
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-github-plain-wordmark"></i>
+		</div>
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-gulp-plain colored"></i>
+		</div>
+		<div class="col s3 m3 l3 xl3 icons responsive-img">
+			<i class="devicon-sass-original colored"></i>
+		</div>
+		<div class="col s3 m3 l3 xl3 icons responsive-img center">
+			<img src="dist/img/materialz.png" alt="" class="">
+		</div>
+	</div>
+	<!-- 3era row icons -->
+	
+
+	
+  </div>
+</section>
+
 
 <!-- SECCION 5: CONTACT (color)-->
 
-	<section class="sec-5 center" id="contact">
-		<h2 class="center">CONTACT</h2>
-		<h6></h6>
-		<i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
-		<i class="fa fa-envelope fa-4x" aria-hidden="true"></i>
-		<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
-		<h3 class ="center"> Let's get in touch </h3>
-	</section>
+<!-- agregué section y container -->
+
+<section class="sec-5 center" id="contact">
+	<div class="container">
+		<div class="row">
+			<div class="col l12 m12 s12">
+				<h2 class="title center">CONTACT</h2>
+			</div>
+			<div class="row">
+				<div class="col l4 m4 s4 icons-contact">
+					<i class="fa fa-github-square fa-3x" aria-hidden="true"></i>
+				</div>
+				<div class="col l4 m4 s4 icons-contact">
+					<i class="fa fa-envelope fa-4x" aria-hidden="true"></i>
+				</div>
+				<div class="col l4 m4 s4 icons-contact">
+					<i class="fa fa-linkedin-square fa-3x" aria-hidden="true"></i>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col l12 m12 s12">
+					<h3 class ="title center"> Let's get in touch </h3>
+				</div>
+			</div>
+		</div>
+	</div>	
+</section>
 
 <!-- FOOTER -->
-<footer>
+<footer class="center">
 	<div class="footer-pic">
 		<div class="container">
 			<div class="row center">
 				<div class="col l12 m12 s12">
-					<p class="footer">© Tcramire 2017</p>
+					<p class="footer center">© Tcramire 2017</p>
 				</div>
 			</div>
 		</div>
