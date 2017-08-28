@@ -20253,6 +20253,7 @@ if (jQuery) {
   };
 })(jQuery);
 
+/* NAVBAR */
 $(document).ready(function(){
     $("#primary-navigation").click(function(){
         $("#secondary-navigation").toggleClass('opened');
@@ -20260,3 +20261,8 @@ $(document).ready(function(){
         $("#main").toggleClass('animate');
     });
 });
+/* HOME */
+$("#os-phrases > h2")
+    .css('opacity', 1).lettering( 'words' )
+    .children( "span" ).lettering()
+    .children( "span" ).lettering(); 
